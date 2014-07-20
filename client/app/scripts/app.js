@@ -4,11 +4,11 @@ angular.module('simpleMail', ['ngRoute'])
   .config(function($routeProvider){
     $routeProvider
     .when('/', {
-      templateUrl: 'templates/home.html',
+      templateUrl: 'partials/home.html',
       controller: 'HomeController'
     })
     .when('/settings', {
-      templateUrl: 'templates/settings.html',
+      templateUrl: 'partials/settings.html',
       controller: 'SettingsController'
     })
     .otherwise({
