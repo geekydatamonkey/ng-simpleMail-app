@@ -1,4 +1,7 @@
 'use strict';
 
-var simpleMail = angular.module('simpleMail', []);
+angular.module('simpleMail', [])
+  .config(function($routeProvider){
+
+  });
 
