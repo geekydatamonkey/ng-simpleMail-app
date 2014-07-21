@@ -1,0 +1,86 @@
+$color-form-border: lighten($gray, 40%);
+$color-form-border-focus: $gray;
+$color-btn: $dark-blue;
+$color-btn-primary: $blue; 
+
+form, 
+.form {
+  .form-group,
+  .form-button-group {
+    margin: 0.5em auto;
+  }
+  .form-group {
+    @include span-columns(8);
+    label {
+      @include span-columns(2 of 8);
+      text-transform: uppercase;
+      text-align: right;
+      font-size: 0.75em;
+      margin-top: 1rem;
+      color: $gray;
+    }
+    input {
+      @include span-columns(6 of 8);
+      padding: 0.75em;
+      border: 0;
+      border-bottom: 0.125em solid $color-form-border;
+      background-color: $white;
+      &:active,
+      &:focus {
+        outline: none;
+        border-bottom-color: $color-form-border-focus;
+      }
+    }
+    &.is-ok.is-dirty {
+      label {
+        color: $blue;
+      }
+      input {
+        color: $blue;
+        border-color: lighten($blue, 30%);
+        &:active,
+        &:focus {
+          border-color: $blue;
+        }
+      }
+    }
+    &.is-error.is-dirty {
+      label {
+        color: $red;
+      }
+      input {
+        border-color: lighten($red, 30%);
+        color: $red;
+        &:active,
+        &:focus {
+          border-color: $red;
+        }
+      }
+    }
+  }
+  .form-button-group {
+    @include span-columns(6);
+    @include shift(2);
+    text-align: right;
+    margin-top: 2.5em;
+  }
+  button,
+  .btn {
+    color: $color-btn;
+    padding: 0.75em 1em;
+    background: transparent;
+    border: 0.125em solid $color-btn;
+    &:hover {
+      background-color: $color-btn;
+      color: $white;
+    }
+  }
+  .btn-primary {
+    border-color: $color-btn-primary;
+    color: $color-btn-primary;
+    &:hover {
+      background-color: $color-btn-primary;
+      color: $white;
+    }
+  }
+}

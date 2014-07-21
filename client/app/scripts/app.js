@@ -9,16 +9,21 @@ angular.module('simpleMail', ['ngRoute'])
     })
     .when('/settings', {
       templateUrl: 'partials/settings.html',
-      controller: 'SettingsController'
+      controller: 'SettingsController',
+      controllerAs: 'settingsCtrl'
     })
     .otherwise({
       redirectTo: '/'
     });
   })
-  .controller('HomeController', function(){
+  .controller('HomeController', function() {
 
   })
-  .controller('SettingsController', function(){
-
+  .controller('SettingsController', function() {
+    this.user = {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'john@doe.com'
+    };
   });
 

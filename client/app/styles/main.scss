@@ -6,5 +6,8 @@
 @import "variables";
 @import "mixins";
 @import "global";
-@import "navbar";
+
+// Modules
+@import "forms";
 @import "main-container";
+@import "navbar";

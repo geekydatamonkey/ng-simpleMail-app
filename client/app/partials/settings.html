@@ -1,1 +1,25 @@
 <h1>Settings</h1>
+
+<form name="settingsForm" class="form">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input name="firstName" ng-model="settingsCtrl.user.firstName" placeholder="First Name" type="text" />
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input name="lastName" ng-model="settingsCtrl.user.lastName" placeholder="Last Name" type="text" />
+  </div>
+  <div class="form-group" 
+    ng-class="{ 
+      'is-ok' : settingsForm.email.$valid,
+      'is-dirty' : settingsForm.email.$dirty,
+      'is-error' : settingsForm.email.$invalid
+    }">
+    <label for="email">Email</label>
+    <input name="email" ng-model="settingsCtrl.user.email" placeholder="Email" type="email" required />
+  </div> 
+  <div class="form-button-group">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+
+</form>
