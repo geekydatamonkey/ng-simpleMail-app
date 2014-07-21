@@ -15,8 +15,7 @@ $navbar-text: $white;
   }
 
   // Whole Container
-  @include outer-container;
-  padding: 1em;
+  @include container;
   color: $navbar-text;
   a {
     color: $navbar-text;
