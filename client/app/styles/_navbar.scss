@@ -1,0 +1,43 @@
+$navbar-background: $dark-blue;
+$navbar-text: $white;
+
+.navbar-wrap {
+  background-color: $navbar-background;
+}
+.navbar {
+  // Reset
+  h1, h2, h3, h4, h5, p, ul, li {
+    margin: 0;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  // Whole Container
+  @include outer-container;
+  padding: 1em;
+  color: $navbar-text;
+  a {
+    color: $navbar-text;
+  }
+
+  // Brand submodule (left)
+  .brand { 
+    @include span-columns($total-columns / 2);
+  }
+
+  // Nav submodule (right)
+  .navbar-nav {
+    @include span-columns($total-columns / 2 );
+    text-align: right;
+    li {
+      margin-top: 0.5em;
+      padding: 0.25em 0.5em;
+      display: inline-block;
+      a {
+      }
+    } 
+  }
+
+}
