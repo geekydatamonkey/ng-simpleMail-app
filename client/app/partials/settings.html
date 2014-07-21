@@ -1,13 +1,23 @@
 <h1>Settings</h1>
 
 <form name="settingsForm" class="form">
-  <div class="form-group">
+  <div class="form-group"
+    ng-class="{ 
+      'is-ok' : settingsForm.firstName.$valid,
+      'is-dirty' : settingsForm.firstName.$dirty,
+      'is-error' : settingsForm.firstName.$invalid
+    }">
     <label for="firstName">First Name</label>
-    <input name="firstName" ng-model="settingsCtrl.user.firstName" placeholder="First Name" type="text" />
+    <input name="firstName" ng-model="settingsCtrl.user.firstName" placeholder="First Name" type="text" required />
   </div>
-  <div class="form-group">
+  <div class="form-group"
+    ng-class="{ 
+      'is-ok' : settingsForm.lastName.$valid,
+      'is-dirty' : settingsForm.lastName.$dirty,
+      'is-error' : settingsForm.lastName.$invalid
+    }">
     <label for="lastName">Last Name</label>
-    <input name="lastName" ng-model="settingsCtrl.user.lastName" placeholder="Last Name" type="text" />
+    <input name="lastName" ng-model="settingsCtrl.user.lastName" placeholder="Last Name" type="text" required />
   </div>
   <div class="form-group" 
     ng-class="{ 
