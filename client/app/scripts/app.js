@@ -20,10 +20,16 @@ angular.module('simpleMail', ['ngRoute'])
 
   })
   .controller('SettingsController', function() {
+    
     this.user = {
       firstName: 'John',
       lastName: 'Doe',
       email: 'john@doe.com'
     };
+
+    this.updateSettings = function() {
+      console.log('Settings are updating... but not really.');
+    };
+
   });
 

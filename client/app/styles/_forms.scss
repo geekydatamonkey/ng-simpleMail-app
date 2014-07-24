@@ -1,7 +1,8 @@
 $color-form-border: lighten($gray, 40%);
 $color-form-border-focus: $gray;
 $color-btn: $dark-blue;
-$color-btn-primary: $blue; 
+$color-btn-primary: $blue;
+$color-btn-disabled: $color-form-border;
 
 form, 
 .form {
@@ -73,6 +74,14 @@ form,
     &:hover {
       background-color: $color-btn;
       color: $white;
+    }
+    &[disabled] {
+      color: $color-btn-disabled;
+      border-color: $color-btn-disabled;
+      &:hover {
+        background-color: inherit;
+        color: $color-btn-disabled;
+      }
     }
   }
   .btn-primary {
