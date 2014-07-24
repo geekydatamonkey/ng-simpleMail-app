@@ -31,5 +31,37 @@ angular.module('simpleMail', ['ngRoute'])
       console.log('Settings are updating... but not really.');
     };
 
+  })
+  .controller('MailListingController', function() {
+      this.mailList = [ {
+        id : 1,
+        from : 'test@test.com',
+        to : 'example@example.com',
+        subject : 'This is a subject',
+        body : 'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.'
+      },
+      {
+        id : 2,
+        from : 'bob@bob.com',
+        to : 'example@example.com',
+        subject : 'This is another subject',
+        body : 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.'
+      }
+      ];
+
+      this.activeMailID = 1;
+
+      this.isActive = function(id) {
+        return (id === this.activeMailID);
+      };
+
+      this.setActive = function(id) {
+        this.activeMailID = id;
+      };
+  })
+  .controller('MailContentController', function() {
+
+
+
   });
 
