@@ -1,21 +1,33 @@
-<div class="main-sidebar" ng-controller="MailListingController as mailListCtrl">
-  <nav class="mail-list">
-    <h1>Inbox</h1>
-    <ul ng-repeat="mail in mailListCtrl.mailList">
-      <li ng-class="{ 'active' : mailListCtrl.isActive(mail.id) }"
-      ng-click="mailListCtrl.setActive(mail.id)">
-        <div class="avatar">
-          E
-        </div>
-        <h2 class="mail-subject">{{ mail.subject }}</h2>
-        <p class="mail-from">{{ mail.from }}</p>
-      </li>
-    </ul>
-  </nav>
-</div>
+<div ng-controller="MailboxController as mailboxCtrl">
+  <div class="main-sidebar" ng-controller="MailListingController as mailListCtrl">
+    <nav class="mail-list">
+      <h1>Inbox</h1>
+      <ul ng-repeat="mail in mailboxCtrl.mailList">
+        <li ng-class="{ 'active' : mailboxCtrl.isActive(mail.id) }"
+        ng-click="mailboxCtrl.setActive(mail.id)">
+          <div class="avatar">
+            E
+          </div>
+          <h2 class="mail-subject">{{ mail.subject }}</h2>
+          <p class="mail-from">{{ mail.from }}</p>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-<div class="main-content" ng-controller="MailContentController as mailContentCtrl">
-  <article>
-    <h1>The Email</h1>
-  </article>
+  <div class="main-content" ng-controller="MailContentController as mailContentCtrl">
+    <article class="mail-content">
+      <header class="mail-header">
+        <p class="mail-from"><span class="label">From:</span> Bob McBobberson &lt;bob@bob.com&gt;</p>
+        <h1 class="mail-subject"><span class="label">Subject:</span> Subject Line Here</h1>
+      </header>
+      <div class="mail-body">
+        <p>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+        <p>Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      </div>
+    </article>
+  </div>
 </div>
