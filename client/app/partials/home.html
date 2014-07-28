@@ -1,7 +1,7 @@
 <div ng-controller="MailboxController as mailboxCtrl">
   <div class="main-sidebar" ng-controller="MailListingController as mailListCtrl">
     <nav class="mail-list">
-      <h1>Inbox</h1>
+      <h1>Inbox <i class="fa fa-toggle-down"></i></h1>
       <ul ng-repeat="mail in mailboxCtrl.mailList">
         <li ng-class="{ 'active' : mailboxCtrl.isActive(mail.id) }"
         ng-click="mailboxCtrl.setActive(mail.id)">
