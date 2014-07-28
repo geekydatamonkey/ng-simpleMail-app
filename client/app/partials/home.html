@@ -6,10 +6,12 @@
         <li ng-class="{ 'active' : mailboxCtrl.isActive(mail.id) }"
         ng-click="mailboxCtrl.setActive(mail.id)">
           <div class="avatar">
-            E
+            {{ getAvatar() }}
           </div>
-          <h2 class="mail-subject">{{ mail.subject }}</h2>
-          <p class="mail-from">{{ mail.from }}</p>
+          <div class="avatar-summary">
+            <h2 class="mail-subject">{{ mail.subject }}</h2>
+            <p class="mail-from">{{ mail.from }}</p>
+          </div>
         </li>
       </ul>
     </nav>
@@ -18,10 +20,18 @@
   <div class="main-content" ng-controller="MailContentController as mailContentCtrl">
     <article class="mail-content">
       <header class="mail-header">
-        <p class="mail-from"><span class="label">From:</span> Bob McBobberson &lt;bob@bob.com&gt;</p>
-        <h1 class="mail-subject"><span class="label">Subject:</span> Subject Line Here</h1>
+        <div class="avatar">
+            {{ getAvatar() }}
+        </div>
+        <div class="avatar-summary">
+          <h1 class="mail-from">Bob McBobberson <span class="mail-from-address">&lt;bob@bob.com&gt;</span></h1>
+          <p class="mail-subject">Birthday Party Next Week</p>
+          <p class="mail-to"><span class="label">To:</span> John Doe, Jane Doe</p>
+        <p class="mail-date">July 27, 2014 at 10:42am</p>
+        </div>
       </header>
       <div class="mail-body">
+        <p>Hello there!</p>
         <p>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>

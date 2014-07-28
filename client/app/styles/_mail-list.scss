@@ -1,6 +1,3 @@
-$color-gray-lighter: lighten($gray, 40%);
-$color-gray-light: lighten($gray, 30%);
-
 .mail-list {
   h1 {
     text-transform: uppercase;
@@ -14,7 +11,8 @@ $color-gray-light: lighten($gray, 30%);
   }
   li {
     cursor: pointer;
-    padding: 0.5em 0;
+    padding: 0.5em 0.5em 0.25em;
+    line-height: 1;
     border-top: 0.125em solid darken($white, 5%);
     &.active {
       background-color: $red;
@@ -32,24 +30,10 @@ $color-gray-light: lighten($gray, 30%);
   }
   .mail-subject {
     font-size: 1em;
-    margin: 0.25em 0;
+    margin: 0;
   }
   .mail-from {
     margin: 0.25em 0;
     color: $color-gray-light;
   }
-  .avatar {
-    font-size: 1em;
-    width: 2em;
-    height: 2em;
-    background-color: $color-gray-lighter;
-    float: left;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 0.4em;
-    color: $white;
-    border-radius: 3px;
-    margin: 0.25em 0.5em;
-  }
-
 }

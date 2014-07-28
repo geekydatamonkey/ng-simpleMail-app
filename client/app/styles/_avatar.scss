@@ -1,0 +1,15 @@
+  .avatar {
+    font-size: 1em;
+    width: 2em;
+    height: 2em;
+    background-color: $color-gray-lighter;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 0.5em;
+    color: $white;
+    border-radius: 3px;
+  }
+  .avatar-summary {
+    margin-left: 2.6em;
+  }

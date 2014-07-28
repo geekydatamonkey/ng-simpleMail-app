@@ -4,6 +4,8 @@ $blue: #3498DB;
 $white: #ECF0F1;
 $red: #E74C3C;
 $gray: #646464;
+$color-gray-lighter: lighten($gray, 40%);
+$color-gray-light: lighten($gray, 30%);
 
 // Layout
 $total-columns: 12;
